@@ -1,7 +1,7 @@
 
 # smoothMatrix
 
-**smoothMatrix** is an OpenFOAM `fvOption` developed by [IANUS Simulation GmbH](https://ianus-simulation.de/en/) and designed to enhance numerical stability in CFD simulations. It automatically detects problematic cells based on mesh quality and applies neighbor-averaged corrections to prevent solution divergence while maintaining physical consistency.
+**smoothMatrix** is an OpenFOAM `fvOption` developed and designed to enhance numerical stability in CFD simulations. It automatically detects problematic cells based on mesh quality and applies neighbor-averaged corrections to prevent solution divergence while maintaining physical consistency.
 
 ## 🚀 Overview
 
@@ -25,7 +25,7 @@ In complex CFD simulations, mesh deficiencies—such as high skewness, non-ortho
 
 1. **Clone the repository:**
 ```bash
-git clone git@bitbucket.org:hmarschall/smoothmatrix.git
+git clone git@github.com:ammad45/smoothMatrix.git
 
 ```
 
