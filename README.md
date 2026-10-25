@@ -7,6 +7,11 @@
 
 In complex CFD simulations, mesh deficiencies—such as high skewness, non-orthogonality, or extreme aspect ratios—often lead to local instabilities that can crash a solver. `smoothMatrix` intervenes by identifying these "bad" cells and applying a weighted averaging technique to the velocity field, ensuring the source terms are treated consistently to preserve local flow behavior.
 
+
+https://github.com/user-attachments/assets/2a8c017c-573a-4582-b215-3c56aaf891fe
+
+
+
 ## ✨ Key Features
 
 * **Different cell detection criterion:** Identifies problematic regions using mesh quality metrics (volume, skewness, non-orthogonality, initial residuals).
