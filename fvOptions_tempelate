@@ -1,0 +1,40 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      dynamicMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+smoothMatrix1
+{
+    type         smoothMatrix;    
+    active       yes;
+    selectionMode    all;
+    rhoName	rho; //name of the density for intrinsic quantities
+    useDensityWeighting true; //default is false
+    smallVolTol  1e-18; //
+    skewTol      2.5;  //face averaged skewness value at the cell center
+    nonOrthTol  60.0;  //face averaged non-Orthogonal value at the cell center
+    U            U;
+    excludeBoundary	false; //exclude boundary cells in selection process
+    // Residual-based averaging window (iterations)
+    avgStartIter    10;        // start from first iteration
+    avgEndIter      1000;       // end of averaging window
+
+    // Threshold on AVERAGE residual over the window
+    maxResidual     1e-3;
+
+    constraintMethod	hardBlend; //softBlend 
+    writeBadCells	false; //write out cells where correction is applied
+    weightingMethod	volumeWeighted;//inverseDistance;   //inverseDistanceSquared; uniform;
+}
+// ************************************************************************* //
